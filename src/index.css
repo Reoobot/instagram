@@ -1,0 +1,214 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #000, #380655, #021e31);
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  #feed-contenedor {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#feed-contenedor {
+  text-align: center;
+  background-color: transparent;
+  margin: 5rem auto;
+  width: 80%;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 20px rgba(230, 215, 215, 0.1);
+}
+@media screen and (max-width: 768px) {
+  #feed-contenedor {
+    margin: 0;
+    width: 100%;
+    padding: 10px; /* Ajusta el padding según sea necesario para dispositivos móviles */
+  }
+}
+
+.chevron span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  width: 4.3rem;
+  height: 4.7rem;
+  background-color: #2c3e50;
+  border: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.chevron span:hover {
+  background-color: #1a252f;
+}
+
+.galery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+  margin: 0;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .galery {
+    margin: 0;
+    gap: 0.5rem; /* Puedes ajustar el espacio entre las imágenes según sea necesario */
+  }
+}
+
+.image,
+.video {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 0px 20px 0px;
+  border: solid .1px black;
+  box-shadow: 0 4px 8px rgba(165, 157, 157, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .image,
+  .video {
+    border-radius: 0; /* Desactiva el border-radius */
+    border: none; /* Elimina el borde */
+    box-shadow: none; /* Elimina la sombra */
+    width: 100%; /* Ajusta al ancho completo */
+    height: auto; /* Ajusta la altura automáticamente */
+    
+  }
+}
+
+.image:hover,
+.video:hover {
+  transform: scale(1.07);
+}
+
+.image img,
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 20px 0px 20px 0;
+  transition: border-radius 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .image img,
+  .video video {
+    border-radius: 0; /* Desactiva el borde redondeado para dispositivos móviles */
+  }
+}
+
+.image:hover .opacity-hover,
+.video:hover .opacity-hover {
+  width: 100%;
+}
+
+.caption {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 300ms ease-in-out;
+  /* position: absolute; */
+  margin-bottom: 10%;
+}
+
+.image:hover .caption,
+.video:hover .caption {
+  transform: translateY(70);
+}
+
+.caption p {
+  color: #fff;
+  width: 80%;
+  margin: 10px 0;
+  font-weight: bold;
+  text-shadow: 0px 5px 4px rgba(153, 21, 76, 0.7);
+}
+
+.opacity-hover {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(2, 2, 2, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.image:hover .opacity-hover,
+.video:hover .opacity-hover {
+  opacity: 4;
+}
+
+.video-player {
+  width: 80%;
+  height: auto;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 0px 20px 0;
+}
+@media screen and (max-width: 768px) {
+  .image img {
+    border-radius: 0; /* Desactiva el border-radius para dispositivos móviles */
+  }
+}
+
+a {
+  margin-top: 10%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3919c7; /* Color de fondo similar al de Porti, puedes ajustarlo según tus preferencias */
+  color: #fff; /* Color del texto en el botón */
+  transition: background-color 0.3s ease-in-out; /* Transición suave para el cambio de color de fondo */
+}
+
+a:hover {
+  background-color: #2980b9; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+
+
+.date-container {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.date {
+  color: #fff;
+  font-size: 14px;
+}
